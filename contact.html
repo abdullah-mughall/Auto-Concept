@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+<style>
+    /* Contact Form Styling */
+    .contact-container {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        border: 10px solid #2d545e;
+        border-radius: 10px;
+        border-color: #2d545e;
+        padding: 20px;
+        background-color: #e1b382;
+        font-family: Arial, sans-serif;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-container h1 {
+        color: #2d545e;
+        text-align: center;
+    }
+
+    .contact-form label {
+        color: #2d545e;
+        font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #2d545e;
+        border-radius: 5px;
+    }
+
+    .contact-form button {
+        background-color: #2d545e;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .contact-form button:hover {
+        background-color: #e1b382;
+    }
+
+    /* Pop-Up Styling */
+    .popup {
+       
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #2d545e;
+        border: 2px solid #e1b382;
+      
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .popup p {
+        margin: 0 0 10px;
+        color: white;
+        font-size: 18px;
+    }
+
+    .popup button {
+        background-color: #e1b382;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .popup button:hover {
+        background-color: #c1976b;
+    }
+
+    /* Overlay Background */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+</style>
+</head>
+<body class="body-cont">
+ <!-- Navbar starts -->
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #2d545e;">
+  <div class="container-fluid" style="background-color: #2d545e;">
+      <img src="logo image.png" alt="" style="height: 80px;width:100px">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link hover-pop" href="#" style="color: #e1b382;">HOME</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link hover-pop" href="contact.html" style="color: #e1b382;">CONTACT US</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link hover-pop" href="cart.html" style="color: #e1b382;">YOUR CART</a>
+              </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle hover-pop" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #e1b382;">
+                      CARS
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #2d545e;">
+                      <li><a class="dropdown-item hover-pop" href="https://www.bmw.com/en/index.html" style="background-color: #2d545e;color:#e1b382;">BMW</a></li>
+                      <li><a class="dropdown-item hover-pop" href="https://www.mercedes-benz.com/en/" style="background-color: #2d545e;color:#e1b382;">MERCEDES</a></li>
+                      <li><a class="dropdown-item hover-pop" href="https://www.lamborghini.com/en-en" style="background-color: #2d545e;color:#e1b382;">LAMBORGHINI</a></li>
+                      <li><a class="dropdown-item hover-pop" href="https://www.bugatti.com/" style="background-color: #2d545e;color:#e1b382;">BUGATTI</a></li>
+                      <li><a class="dropdown-item hover-pop" href="https://www.ferrari.com/en-FI" style="background-color: #2d545e;color:#e1b382;">FERARRI</a></li>
+                      <li><a class="dropdown-item hover-pop" href="https://www.nissanusa.com/" style="background-color: #2d545e;color:#e1b382;">NISSAN</a></li>
+                      <li><a class="dropdown-item hover-pop" href="porsche.com" style="background-color: #2d545e;color:#e1b382;">PORSCHE</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover-pop" href="login.html" style="color: #e1b382;">BACK TO LOGIN</a>
+          </ul>
+          <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="background-color: #e1b382;">
+              <button class="btn btn-outline-success hover-pop" type="submit" style="color: #e1b382;">Search</button>
+          </form>
+      </div>
+  </div>
+</nav>
+<!-- Navbar ends -->
+<div class="contact-container">
+    <h1 class="carr">Contact Us</h1>
+    <form class="contact-form" onsubmit="return handleSubmit(event)">
+        <label for="name" class="parr">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email" class="parr">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+        <label for="phone" class="parr">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+        <label for="message" class="parr">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+        <button type="submit" class="parr-1">Submit</button>
+    </form>
+</div>
+<!-- Pop-Up -->
+<div class="overlay" id="overlay"></div>
+<div class="popup" id="popup">
+    <p>Dear Customer , Your request was submitted successfully!</p>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+    // Handle form submission
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent actual form submission
+        document.getElementById('popup').style.display = 'block'; // Show the pop-up
+        document.getElementById('overlay').style.display = 'block'; // Show the overlay
+    }
+    // Close the pop-up
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none'; // Hide the pop-up
+        document.getElementById('overlay').style.display = 'none'; // Hide the overlay
+    }
+</script>
+<!-- Bottom Navigation starts -->
+<footer class=" footer">
+  <div class="container-fluid py-3">
+    <div class="row">
+      <div class="col-12 text-center">
+        
+        <!-- Logo Section -->
+        <div class="mb-3">
+          <img src="logo image.png" alt="Logo" style="height: 100px; width: auto;" class="logo-footer">
+        </div>
+
+        <!-- Main Navigation Links -->
+        <ul class="list-unstyled d-flex justify-content-center mb-0">
+          <li class="mx-3">
+            <a href="index.html" class="text-white-1 hover-pop">
+              <i class="bi bi-house-door" style="font-size: 24px;"></i>
+              <p>Home</p>
+            </a>
+          </li>
+          <li class="mx-3">
+            <a href="cars.html" class="text-white hover-pop">
+              <i class="bi bi-car-front" style="font-size: 24px;"></i>
+              <p>Cars</p>
+            </a>
+          </li>
+          <li class="mx-3">
+            <a href="contact.html" class="text-white hover-pop">
+              <i class="bi bi-chat" style="font-size: 24px;"></i>
+              <p>Contact</p>
+            </a>
+          </li>
+          <li class="mx-3">
+            <a href="cart.html" class="text-white hover-pop">
+              <i class="bi bi-cart" style="font-size: 24px;"></i>
+              <p>Your Cart</p>
+            </a>
+          </li>
+        </ul>
+        <!-- Social Media Icons -->
+        <ul class="list-unstyled d-flex justify-content-center mt-3">
+          <li class="mx-3">
+            <a href="https://www.facebook.com/profile.php?id=61556361389456&mibextid=ZbWKwL" target="_blank" class="text-white hover-pop">
+              <i class="bi bi-facebook" style="font-size: 24px;" ></i>
+            </a>
+          </li>
+          <li class="mx-3">
+            <a href="https://www.instagram.com/abdullah.__mughal?igsh=MWtkdjBmcm54bHZwbw==" target="_blank" class="text-white hover-pop">
+              <i class="bi bi-instagram" style="font-size: 24px;"></i>
+            </a>
+          </li>
+          <li class="mx-3">
+            <a href="https://whatsapp.com/channel/0029VafubEn8vd1P8Qrv1m11 " target="_blank" class="text-white hover-pop">
+              <i class="bi bi-whatsapp" style="font-size: 24px;"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </div>
+</footer>
+<!-- Bottom Navigation ends -->
+<!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+

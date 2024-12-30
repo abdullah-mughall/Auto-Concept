@@ -1,0 +1,267 @@
+.body-main{
+    background-color: #e1b382; 
+}
+/* Navbar Starts */
+
+/* Carousel starts */
+.container-fluid{
+    background-color:#2d545e;
+}
+.navbar{
+    color: #e1b382;
+}
+.nav-link{
+  
+    font-family: "Cantata One", serif;
+    font-weight: 800;
+    font-style: normal;
+    margin-right: 30px;
+}
+.hover-pop {
+    transition: transform 0.3s ease, box-shadow 0.3 s ease;
+}
+
+.hover-pop:hover {
+    transform: scale(1.1); /* Makes the button pop out */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+/* Navbar ends */
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .carousel-control-prev-icon, 
+  .carousel-control-next-icon {
+    filter: invert(1); /* Makes controls white for better visibility */
+  }
+
+  .carousel-control-prev:hover, 
+  .carousel-control-next:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+  .carr{
+    font-family: "Cantata One", serif;
+    font-weight: 800;
+    font-style: normal;
+    
+    margin-right: 30px;
+  }
+  .parr{
+    font-family: "Cantata One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 30px;
+  }
+  /* CAROUSEL ENDS */
+
+  /* Footer starts */
+  footer ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  footer li {
+    margin: 0 20px;
+    text-align: center;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  footer a:hover {
+    color: #e1b382;  /* Change color on hover */
+    text-decoration: underline;
+    transform: translateY(-5px);  /* Moves the button slightly up */
+    transition: transform 0.3s ease-in-out;  /* Smooth transition */
+  }
+  
+  footer p {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .hover-pop {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hover-pop:hover {
+    transform: scale(1.1);  /* Scales the button when hovered */
+  }
+
+.parr-1{
+    font-family: "Cantata One", serif;
+    font-weight: 200;
+    font-style: normal;
+    margin-right: 30px;
+    color: white;
+}
+.carr-1{
+    font-family: "Cantata One", serif;
+    font-weight: 800;
+    font-style: normal;
+    margin-right: 30px;
+    color: white;
+}
+/* styles.css */
+
+.body-contact {
+  font-family: Arial, sans-serif;
+  background-color: #e1b382;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: #2d545e;;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+.head-cont {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: white;
+}
+.contact-form input,
+.contact-form textarea {
+  border: 2px solid #e1b382;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: black;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: white;
+}
+.contact-form button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.contact-form button:hover {
+  background-color: #d19a73;
+  color: black;
+}
+.parr-1{
+  font-family: "Cantata One", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-right: 30px;
+  align-items: center;
+  align-content: center;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #2d545e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.popup p {
+  margin: 0 0 10px;
+  color: #2d545e;
+  font-size: 18px;
+}
+.popup button {
+  background-color: #e1b382;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.popup button:hover {
+  background-color: #c1976b;
+}
+.body-cont{
+  background-image: url(https://wallpapercave.com/wp/wp12500273.jpg);
+}
+.card{
+  border-color: #2d545e;
+  border-radius: 10px;
+}
+.nissan-card1{
+  height: 200px;
+  margin-right: 10px;
+  border-radius: 200px;
+  margin-bottom: 10px;
+}
+.nissan-card2{
+  height: 200px;
+  width: 160px;
+  border-radius: 200px;
+  margin-bottom: 10px;
+}
+.nissan-card3{
+  height: 200px;
+  width: 160px;
+  border-radius: 200px;
+  margin-bottom: 10px;
+}
+.nissan-card1, .nissan-card2, .nissan-card3 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nissan-card1:hover,
+.nissan-card2:hover,
+.nissan-card3:hover {
+  transform: scale(1.1); 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+.view-details-btn {
+  background-color: #2d545e;
+  color: white;
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+.view-details-btn:hover {
+  background-color: #c1976b;
+  transform: scale(1.1); 
+}
+.nissan-cart{
+  justify-content :space-between;
+  align-items: center;
+  display: flex;  
+}
